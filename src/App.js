@@ -22,7 +22,7 @@ const history = useHistory();
               <HeadingSecondary/>;
         <HeadingPrimary/>;
               <Spacer margin='2rem' />
-              <Button onClick={()=>history.push('/about')}>Explore</Button>
+              <Button onClick={()=>history.push('/about')}>EXPLORE</Button>
           <Spacer margin='2rem' />
           <IconBar />
           </LeftContainer>

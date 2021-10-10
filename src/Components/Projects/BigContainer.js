@@ -15,7 +15,7 @@ const Container = styled.div`
 function BigContainer({ children, close , gap}) {
   return (
       <>
-        <Spacer margin='10rem' />
+        <Spacer margin='8rem' />
 
         <Container close={close} gap={gap}>  {children}</Container>);
       </> )}

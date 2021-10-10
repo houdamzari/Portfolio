@@ -10,6 +10,7 @@ import About from "./About/About";
 import Navbar from "./Navbar/Navbar";
 import Skills from "./Skills/Skills";
 import Projects from "./Projects/Projects";
+import Contact from "./Contact/Contact";
 export default function Layout() {
 
     return (
@@ -28,7 +29,12 @@ export default function Layout() {
                         <Skills />
                     </Route>
                     <Route path="/projects">
+                        <Navbar />
                         <Projects />
+                    </Route>
+                    <Route path="/contact">
+                        <Navbar />
+                        <Contact />
                     </Route>
                     <Route path="/">
                         <App />
