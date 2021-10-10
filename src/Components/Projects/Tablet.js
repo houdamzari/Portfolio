@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   .meuContainer {
     transform: scale(1);
-    width: 10rem;
+    width: 50%;
     height: 1000px;
     background-color: white;
     margin: 0;

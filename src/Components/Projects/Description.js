@@ -7,13 +7,10 @@ const Container = styled.div`
   width: 100%;
   font-size: 1.2rem;
 `;
-function Description(props) {
+function Description({description}) {
   return (
     <Container>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad amet
-      asperiores esse eum exercitationem id incidunt ipsa, mollitia natus
-      nesciunt odit porro, quae quaerat, quia voluptate? Ab dolore ducimus odit.
-    </Container>
+        {description}</Container>
   );
 }
 

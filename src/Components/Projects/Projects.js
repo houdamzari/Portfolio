@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState,useEffect} from "react";
 import BigContainer from "./BigContainer";
 import Spacer from "../../Utilities/Spacer";
 import picture from "../../media/pic.jpeg";
@@ -7,16 +7,24 @@ import Tablet from "./Tablet";
 import HeadingPrimary from "./HeadingPrimary";
 
 function Projects(children) {
-  return (
-    <BigContainer close>
-      <div className="column">
-        <HeadingPrimary />
-        <Description />
+    const [data,setData] = useState([])
+    const url = "http://portfolio-backend1432.herokuapp.com/api/projects"
+    useEffect(()=> {fetch(url)
+        .then((response) => response.json())
+        .then(({data}) => setData(data))}   , [])
+  return data.map((t)=>(
+    <BigContainer close >
+
+        <div className="column">
+            <Spacer margin='5rem' />
+
+            <HeadingPrimary title={t.title} />
+        <Description  description={t.desc}/>
       </div>
 
       <Tablet img={picture} />
     </BigContainer>
-  );
+  ));
 }
 
 export default Projects;

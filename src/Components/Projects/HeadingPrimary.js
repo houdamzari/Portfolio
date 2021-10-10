@@ -13,10 +13,10 @@ const Container = styled.div`
     line-height: 1rem;
   }
 `;
-function HeadingPrimary(props) {
+function HeadingPrimary({title}) {
   return (
     <Container>
-      <h1> RONA-FREE</h1>
+      <h1> {title}</h1>
       <span>
         &#8212;A statistics web app about the Coronavirus state in MOROCCO
       </span>
