@@ -1,50 +1,65 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import App from "../App";
-import About from "./About/About";
-import Navbar from "./Navbar/Navbar";
-import Skills from "./Skills/Skills";
-import Projects from "./Projects/Projects";
-import Contact from "./Contact/Contact";
+import React, { lazy, Suspense } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { AnimatedSwitch, spring } from "react-router-transition";
+const App = lazy(() => import("../App"));
+const About = lazy(() => import("./About/About"));
+const Navbar = lazy(() => import("./Navbar/Navbar"));
+const Skills = lazy(() => import("./Skills/Skills"));
+const Projects = lazy(() => import("./Projects/Projects"));
+const Contact = lazy(() => import("./Contact/Contact"));
 export default function Layout() {
-  const timeout = { enter: 800, leave: 400 };
+  function bounce(val) {
+    return spring(val, {
+      stiffness: 100,
+      damping: 50,
+    });
+  }
 
   return (
     <Router>
-      <TransitionGroup component="div" className="App">
-        <CSSTransition
-          key={currentKey}
-          timeout={timeout}
-          classNames="pageSlider"
-          mountOnEnter={false}
-          unmountOnExit={true}
+      <div>
+        <AnimatedSwitch
+          atEnter={{ opacity: 0, scale: 1.2, translateX: -100 }}
+          atLeave={{ opacity: bounce(0), scale: bounce(0.8), translateX: 100 }}
+          atActive={{ opacity: bounce(1), scale: bounce(1), translateX: 0 }}
+          mapStyles={(styles) => ({
+            transform: `translateX(${styles.translateX}%)`,
+            opacity: styles.opacity,
+            scale: styles.scale,
+          })}
+          className="switch-wrapper"
         >
-          <div>
-            <Switch>
-              <Route path="/about">
-                <Navbar />
-                <About />
-              </Route>
-              <Route path="/skills">
-                <Navbar />
-                <Skills />
-              </Route>
-              <Route path="/projects">
-                <Navbar />
-                <Projects />
-              </Route>
-              <Route path="/contact">
-                <Navbar />
-                <Contact />
-              </Route>
-              <Route path="/">
-                <App />
-              </Route>
-            </Switch>
-          </div>
-        </CSSTransition>
-      </TransitionGroup>
+          <Route key="about" exact path="/about">
+            <Suspense fallback={"loading..."}>
+              <Navbar />
+              <About />
+            </Suspense>
+          </Route>
+          <Route key="skills" exact path="/skills">
+            <Suspense fallback={"loading..."}>
+              <Navbar />
+              <Skills />
+            </Suspense>
+          </Route>
+          <Route key="projects" exact path="/projects">
+            <Suspense fallback={"loading..."}>
+              <Navbar />
+              <Projects />
+            </Suspense>
+          </Route>
+          <Route key="contact" exact path="/contact">
+            <Suspense fallback={"loading..."}>
+              <Navbar />
+              <Contact />
+            </Suspense>
+          </Route>
+          <Route key="home" exact path="/">
+            <Suspense fallback={"loading..."}>
+              <App />
+            </Suspense>
+          </Route>
+        </AnimatedSwitch>
+      </div>
     </Router>
   );
 }

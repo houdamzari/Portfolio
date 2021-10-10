@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import BigContainer from "./BigContainer";
 import picture from "../../media/pic.jpeg";
 import Description from "./Description";
+import Fade from "react-reveal/Fade";
 import Tablet from "./Tablet";
 import HeadingPrimary from "./HeadingPrimary";
 
-function Projects(children) {
+function Projects() {
   const [data, setData] = useState([]);
   const url = "http://portfolio-backend1432.herokuapp.com/api/projects";
   useEffect(() => {
@@ -14,14 +15,16 @@ function Projects(children) {
       .then(({ data }) => setData(data));
   }, []);
   return data.map((t) => (
-    <BigContainer close>
-      <div className="column">
-        <HeadingPrimary title={t.title} />
-        <Description description={t.desc} />
-      </div>
+    <Fade top>
+      <BigContainer close>
+        <div className="column">
+          <HeadingPrimary title={t.title} />
+          <Description description={t.desc} />
+        </div>
 
-      <Tablet img={picture} />
-    </BigContainer>
+        <Tablet img={picture} />
+      </BigContainer>
+    </Fade>
   ));
 }
 

@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../theme";
 import Spacer from "../../Utilities/Spacer";
 
 const Container = styled.div`

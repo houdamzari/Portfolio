@@ -4,8 +4,9 @@ import Profile from "./Profile";
 import BigContainer from "./BigContainer";
 import { useHistory } from "react-router-dom";
 
-function About(children) {
+function About({ setLocation }) {
   const history = useHistory();
+
   return (
     <div>
       <BigContainer>

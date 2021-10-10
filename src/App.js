@@ -1,3 +1,4 @@
+import React from "react";
 import HeadingPrimary from "./Components/Home/HeadingPrimary";
 import HeadingSecondary from "./Components/Home/HeadingSecondary";
 import Button from "./Components/Home/Button";
