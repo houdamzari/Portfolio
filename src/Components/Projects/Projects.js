@@ -5,6 +5,7 @@ import picture from "../../media/pic.jpeg";
 import Description from "./Description";
 import Tablet from "./Tablet";
 import HeadingPrimary from "./HeadingPrimary";
+import Button from "../Home/Button";
 
 function Projects(children) {
     const [data,setData] = useState([])
@@ -16,7 +17,6 @@ function Projects(children) {
     <BigContainer close >
 
         <div className="column">
-            <Spacer margin='5rem' />
 
             <HeadingPrimary title={t.title} />
         <Description  description={t.desc}/>

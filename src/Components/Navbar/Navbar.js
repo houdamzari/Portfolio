@@ -36,6 +36,8 @@ const Container = styled.div `
 function Navbar(props) {
     const location = useLocation();
     const condition = location.pathname === "/about";
+    const conditions = location.pathname === "/projects";
+
     return (
 
         <Container condition={condition}>
@@ -54,6 +56,9 @@ function Navbar(props) {
                     <li>
                         <Link to="/projects">Projects</Link>
                     </li>
+                    <li>
+                    <Link to="/contact">Contact</Link>
+                </li>
 
                 </ul>
             </nav>

@@ -4,6 +4,8 @@ import { theme } from "../../theme";
 
 const Container = styled.div`
   padding-bottom: 2rem;
+  position: relative;
+  left: 13rem;
   width: 100%;
   color: ${theme.pink};
   span {
