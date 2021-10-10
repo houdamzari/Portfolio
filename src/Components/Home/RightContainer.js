@@ -1,14 +1,33 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../theme";
-import javascript from "../../media/javascript.svg";
 import background from "../../media/background.svg";
 
 const Container = styled.div`
-  width: 70vw;
+  width: 80vw;
   height: 100vh;
   position: relative;
+  @media (max-width: 768px) {
+    svg {
+      path {
+        fill: ${theme.lightpink};
+      }
+    }
 
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+    .icon1 {
+      display: none !important;
+    }
+    #icon2 {
+    }
+    .icon6 {
+      top: 550px !important;
+    }
+  }
   &:before {
     content: "";
     position: absolute;
@@ -32,26 +51,51 @@ const Container = styled.div`
 
   .icon1 {
     position: absolute;
-    top: 20rem;
+    top: 300px;
     width: 20rem;
     height: 10rem;
-    left: 50rem;
+    right: -90px;
+    transition: all 1s;
+    @media (max-width: 768px) {
+      display: none !important;
+    }
   }
   //React
   #icon2 {
     position: absolute;
     width: 15rem;
     height: 15rem;
-    top: 30rem;
-    left: 35rem;
+    top: 550px;
+    left: 600px;
+    transition: all 1s;
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 100px !important;
+      width: 150px !important;
+      height: 150px !important;
+      g {
+        stroke: ${theme.lightpink};
+      }
+      left: 90px !important;
+      transition: all 1s;
+    }
   }
   //CSS
   .icon3 {
     position: absolute;
     top: 3rem;
-    left: 46rem;
+    right: -20px;
     width: 5rem;
     height: 7rem;
+    transition: all 1s;
+    @media (max-width: 768px) {
+      path:not(:first-child) {
+        fill: white;
+      }
+      .trans {
+        fill: transparent !important;
+      }
+    }
   }
   //Figma
   .icon4 {
@@ -60,14 +104,16 @@ const Container = styled.div`
     left: 30rem;
     width: 7rem;
     height: 7rem;
+    transition: all 1s;
   }
   //Laravel
   .icon5 {
     position: absolute;
     width: 5rem;
     height: 5rem;
-    top: 15rem;
-    left: 46rem;
+    top: 450px;
+    right: 200px;
+    transition: all 1s;
   }
   @keyframes bounce {
     0% {
@@ -83,23 +129,25 @@ const Container = styled.div`
   //SASS
   .icon6 {
     position: absolute;
-    top: 35rem;
+    top: 800px;
     left: 15rem;
     width: 10rem;
     height: 7rem;
+    transition: all 1s;
   }
   .background {
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: -1;
     object-fit: cover;
+    right: -100px;
+    z-index: -1;
   }
 `;
-function RightContainer(props) {
+function RightContainer({ mobile }) {
   return (
     <Container>
-      <img className="background" src={background} alt="back" />
+      {!mobile && <img className="background" src={background} alt="back" />}
       <svg
         className="icon1"
         xmlns="http://www.w3.org/2000/svg"
@@ -196,6 +244,7 @@ function RightContainer(props) {
           d="M18.814 114.123l-10.054-112.771h110.48l-10.064 112.754-45.243 12.543-45.119-12.526z"
         />
         <path
+          className="trans"
           fill="transparent"
           d="M64.001 117.062l36.559-10.136 8.601-96.354h-45.16v106.49z"
         />

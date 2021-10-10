@@ -1,24 +1,20 @@
-import React from 'react';
+import React from "react";
 import HeadingPrimary from "./HeadingPrimary";
 import Profile from "./Profile";
-import Colorsbar from "../Home/Colorsbar";
 import BigContainer from "./BigContainer";
-import Spacer from "../../Utilities/Spacer";
-
-
+import { useHistory } from "react-router-dom";
 
 function About(children) {
+  const history = useHistory();
+  return (
+    <div>
+      <BigContainer>
+        <HeadingPrimary history={history} />
 
-    return (
-        <div>
-            <BigContainer>
-
-                <HeadingPrimary />
-
-                <Profile />
-            </BigContainer>
-        </div>
-    );
+        <Profile />
+      </BigContainer>
+    </div>
+  );
 }
 
 export default About;

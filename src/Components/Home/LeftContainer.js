@@ -1,19 +1,18 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import {theme} from '../../theme';
-
+import { theme } from "../../theme";
 
 const Container = styled.div`
-      margin-left:  10rem;
+  margin-left: 10rem;
   width: 50%;
-
-`
-function LeftContainer({children}) {
-    return (
-        <Container>
-            {children}
-        </Container>
-    );
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 50%;
+    margin-left: 30px;
+  }
+`;
+function LeftContainer({ children }) {
+  return <Container>{children}</Container>;
 }
 
 export default LeftContainer;

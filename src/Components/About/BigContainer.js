@@ -1,21 +1,16 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
-import {theme} from '../../theme';
+import { theme } from "../../theme";
 
-
-
-
-const Container = styled.div `
-    
-    display: flex;
+const Container = styled.div`
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
-
-`
-function BigContainer({children}) {
-    return (
-        <Container> {children}</Container>
-    );
+  height: 90vh;
+  overflow: hidden;
+`;
+function BigContainer({ children }) {
+  return <Container> {children}</Container>;
 }
 
 export default BigContainer;
