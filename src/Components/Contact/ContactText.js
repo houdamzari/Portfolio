@@ -7,9 +7,9 @@ import Center from "../Center";
 
 const Container = styled.div`
 
-      font-size: 7rem;
+  padding-top: 7rem;
+      font-size: 6rem;
   position: relative;
-  left: 15%;
   font-weight: 400;
  
 `
