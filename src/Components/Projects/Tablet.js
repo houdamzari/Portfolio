@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
+  width: 20%;
+
   .meuContainer {
     transform: scale(1);
     width: 50%;
-    height: 1000px;
+    height: 550px;
     background-color: white;
     margin: 0;
     -webkit-transform-origin: 50% 0;

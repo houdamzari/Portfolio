@@ -5,7 +5,7 @@ import Spacer from "../../Utilities/Spacer";
 const Container = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: center !important;
   gap: ${(props) => props.gap};
   justify-content: ${(props) => (props.close ? "flex-start" : "space-between")};
   .column {

@@ -19,7 +19,7 @@ function Projects() {
       <BigContainer close>
         <div className="column">
           <HeadingPrimary title={t.title} />
-          <Description description={t.desc} />
+          <Description description={t.desc} tags={t.tags} />
         </div>
 
         <Tablet img={picture} />
