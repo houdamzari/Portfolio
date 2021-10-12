@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../theme";
 
 const Container = styled.div`
   -webkit-text-stroke: 2px #6ed2d9; /* width and color */
