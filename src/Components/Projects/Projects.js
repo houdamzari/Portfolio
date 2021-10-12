@@ -8,7 +8,7 @@ import HeadingPrimary from "./HeadingPrimary";
 
 function Projects() {
   const [data, setData] = useState([]);
-  const url = "http://portfolio-backend1432.herokuapp.com/api/projects";
+  const url = "https://portfolio-backend1432.herokuapp.com/api/projects";
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
