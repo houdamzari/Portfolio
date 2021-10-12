@@ -1,16 +1,18 @@
 import React from "react";
 import BigContainer from "./BigContainer";
 import CardProgramming from "./CardProgramming";
-import CardSoftware from "./CardSoftware";
 import Text from "./Text";
+import Fade from "react-reveal/Fade";
 
 function Skills() {
   return (
     <div>
       <BigContainer>
         <Text />
-        <CardProgramming />
-        <CardSoftware />
+
+        <Fade bottom>
+          <CardProgramming />
+        </Fade>
       </BigContainer>
     </div>
   );
