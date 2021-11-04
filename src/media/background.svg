@@ -1,10 +1,1 @@
-<svg width="2000" height="2444" viewBox="0 0 2000 2444" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1851.18 13.1296V2338.96H16.7047L1851.18 13.1296Z" fill="#FCDDCD"/>
-<ellipse cx="776.006" cy="1591.51" rx="230.828" ry="272.91" fill="#FCDDCD"/>
-<ellipse cx="339.408" cy="2171.09" rx="301.443" ry="272.91" fill="#FCDDCD"/>
-<ellipse cx="1282.46" cy="1001.61" rx="231.587" ry="273.848" fill="#FCDDCD"/>
-<ellipse rx="223.737" ry="238.551" transform="matrix(0.930006 0.367543 -0.450887 0.892581 315.636 1682.97)" fill="white"/>
-<ellipse rx="223.737" ry="238.551" transform="matrix(0.930006 0.367543 -0.450887 0.892581 822.199 1093.47)" fill="white"/>
-<ellipse cx="1769.17" cy="272.91" rx="230.828" ry="272.91" fill="#FCDDCD"/>
-<ellipse rx="223.737" ry="242.752" transform="matrix(0.930006 0.367543 -0.450887 0.892581 1347.8 500.233)" fill="white"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="2444" fill="none" viewBox="0 0 2000 2444"><path fill="#FCDDCD" d="M1851.18 13.1296V2338.96H16.7047L1851.18 13.1296Z"/><ellipse cx="776.006" cy="1591.51" fill="#FCDDCD" rx="230.828" ry="272.91"/><ellipse cx="339.408" cy="2171.09" fill="#FCDDCD" rx="301.443" ry="272.91"/><ellipse cx="1282.46" cy="1001.61" fill="#FCDDCD" rx="231.587" ry="273.848"/><ellipse fill="#fff" rx="223.737" ry="238.551" transform="matrix(0.930006 0.367543 -0.450887 0.892581 315.636 1682.97)"/><ellipse fill="#fff" rx="223.737" ry="238.551" transform="matrix(0.930006 0.367543 -0.450887 0.892581 822.199 1093.47)"/><ellipse cx="1769.17" cy="272.91" fill="#FCDDCD" rx="230.828" ry="272.91"/><ellipse fill="#fff" rx="223.737" ry="242.752" transform="matrix(0.930006 0.367543 -0.450887 0.892581 1347.8 500.233)"/></svg>
